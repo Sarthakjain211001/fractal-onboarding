@@ -1,0 +1,38 @@
+<div class="container" >
+<form method="POST" enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="SAVE">
+</form>
+
+<br/><br/>
+<hr>
+
+<div style="background-color: olive; color: white">
+    {% for data in dataset %}
+    <label> <b>Task id:</b> </label>
+    {{data.id}}
+    <br/> <br/>
+    <label><b>Title:</b> </label>
+    {{data.title}}
+    <br/> <br/>
+    <label> <b>Description:</b> </label>
+    {{data.description}}
+    <br/> <br/>
+    <label> <b>Completed:</b> </label>
+    {{data.completed}}
+    <br/> <br/>
+    <label>  <b>Created at:</b></label>
+    {{data.created_at}}
+    <br/><br/>
+    <a href="{% url 'update_task' data.id %}">
+        <button type="button"><b>Update</b></button>
+    </a>
+    <a href="{% url 'delete_task' data.id %}">
+        <button type="button" style="color: red;"><b>Delete</b></button>
+    </a>
+    <hr />
+    {% endfor %}
+</div>
+
+</div>

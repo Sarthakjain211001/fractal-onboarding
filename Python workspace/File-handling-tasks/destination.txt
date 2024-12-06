@@ -1,0 +1,2 @@
+This is sample file. 
+Writing some content in it.Some new data by append mode.

@@ -1,0 +1,13 @@
+1.) 
+git init
+git clone "link of github repo"
+git add .
+git commit -m "message for commit"
+git push
+
+git commit -m " " will commit the changes from staging area to the local repo ready to be pushed to the remote repository.
+
+2.) 
+Git branch is a new/separate version of the main directory. Branches allow you to work on different parts of a project without impacting the main branch.
+when the work gets completed the branch can be merged with the main directory.
+we can switch between branches and work on different projects.

@@ -1,0 +1,2 @@
+This is a sample data from data1 file.
+We will write this data in another file.
